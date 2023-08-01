@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--여행스타일 선택과 기간 선택을 위한 액티비티 레이아웃 파일-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity2">
+
+    <!-- "여행스타일을 알려주세요."라는 텍스트를 보여주는 TextView -->
+    <TextView
+        android:id="@+id/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="여행스타일을 알려주세요."
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <!-- "완료"버튼-->
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:text="완료"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85"
+        tools:ignore="MissingConstraints" />
+
+    <!-- "어떤 테마를 선호하시나요?"라는 텍스트를 보여주는 TextView -->
+    <TextView
+        android:id="@+id/text_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="어떤 테마를 선호하시나요?"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_style"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <!-- "어떤 기간을 선호하시나요?"라는 텍스트를 보여주는 TextView -->
+    <TextView
+        android:id="@+id/text_period"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="어떤 기간을 선호하시나요?"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_theme" />
+
+    <!--여행 테마 선택을 위한 RadioGroup -->
+    <RadioGroup
+        android:id="@+id/radio_theme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="#34AFAFAF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_theme"
+        tools:ignore="MissingConstraints">
+
+
+        <!--액티비티/레저 테마를 선택할 수 있는 RadioButton -->
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="액티비티/레저"
+            app:layout_constraintTop_toBottomOf="@+id/text_theme" />
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content" />
+
+        <!--힐링 테마를 선택할 수 있는 RadioButton -->
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="힐링"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="220dp" />
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content" />
+
+        <!--전시 테마를 선택할 수 있는 RadioButton -->
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전시"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="220dp" />
+
+    </RadioGroup>
+
+    <!--여행 기간 선택을 위한 RadioGroup -->
+    <RadioGroup
+        android:id="@+id/radio_period"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="#34AFAFAF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_period"
+        tools:ignore="MissingConstraints">
+
+        <!-- 1일 여행 기간을 선택할 수 있는 RadioButton -->
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1일"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="220dp" />
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content" />
+
+        <!-- 1일~2일 여행 기간을 선택할 수 있는 RadioButton -->
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1일~2일" />
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content" />
+
+        <!-- 3일 이상 여행 기간을 선택할 수 있는 RadioButton -->
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3일 이상"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="220dp" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
